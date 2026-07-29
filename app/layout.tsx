@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title,
   description,
+  // 公開準備が整うまでは検索エンジンに載せない。正式公開時にこの2行を削除する
+  robots: { index: false, follow: false },
   openGraph: {
     title,
     description,
